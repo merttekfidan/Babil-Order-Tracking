@@ -84,7 +84,7 @@
 <div class="form-group row">
   <div class="col-10">
     <div class="custom-control custom-checkbox">
-      <input type="checkbox" name="controlAllowed" class="custom-control-input" id="controlAllowed" {{isset($orders->control_allowed) && $orders->control_allowed==1 ? 'checked' :''}}>
+      <input type="checkbox" name="controlAllowed" class="custom-control-input" id="controlAllowed" {{isset($orders->control_allowed) && $orders->control_allowed==0 ? '' :'checked'}}>
       <label class="custom-control-label font-weight-normal" for="controlAllowed">Kontrollü kargo</label>
     </div>
   </div>
@@ -92,7 +92,7 @@
 <div class="form-group row">
   <div class="col-10">
     <div class="custom-control custom-checkbox">
-      <input type="checkbox" name="paymentOnDoor" class="custom-control-input" id="paymentOnDoor" {{isset($orders->payment_on_door) && $orders->payment_on_door==1 ? 'checked' :''}}>
+      <input type="checkbox" name="paymentOnDoor" class="custom-control-input" id="paymentOnDoor" {{isset($orders->payment_on_door) && $orders->payment_on_door==0 ? '' :'checked'}}>
       <label class="custom-control-label font-weight-normal" for="paymentOnDoor">Gönderici Ödeme</label>
     </div>
   </div>
