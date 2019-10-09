@@ -14,7 +14,8 @@
 
   <tr>
     <td><b>Fiyat:</b></td>
-    <td>{{$orders->price}} TL  ({{$orders->payment_methods->method_name}})</td>
+    <td>@if ($orders->payment_methods->id==3) 0 TL @else {{$orders->price}} TL @endif
+      ({{$orders->payment_methods->method_name}})</td>
   </tr>
   <tr>
     <td><b>Tarih: </b></td>
