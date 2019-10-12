@@ -23,7 +23,7 @@ class CreateOrdersTable extends Migration
             $table->string('product_code', 255);
             $table->decimal('price', 9, 2);
             $table->integer('statuses_id');
-            $table->string('note', 255);
+            $table->string('note', 255)->nullable();
             $table->integer('payment_methods_id');
             $table->boolean('control_allowed');
             $table->boolean('payment_on_door');
