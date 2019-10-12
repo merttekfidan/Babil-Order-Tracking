@@ -137,6 +137,8 @@ class OrderController extends Controller
      */
     public function destroy(Order $order)
     {
-        //
+        $order = Order::findOrFail($order->id);
+        $order->delete();
+        return redirect()->route('orders.index')->with('success', " Başarılı bir şekilde sipariş silindi.");
     }
 }

@@ -48,7 +48,12 @@
                         <td>{{ date('d-m-Y', strtotime($order->created_at)) }}</td>
                         <td><a href="{{route('orders.edit',$order->id)}}" class="btn btn-sm btn-outline-primary" >Edit</a></td>
                         <td><a target="_blank" href="{{route('orders.show',$order->id)}}" class="btn btn-sm btn-outline-primary" >Baskı</a></td>
-                        <td><a href="{{route('orders.destroy',$order->id)}}" class="btn btn-sm btn-outline-danger" >Sil</a></td>
+                        <td>
+                          <form id="rec_remove_{{$order->id}}" style="display:inline;" action="{{route('orders.destroy',$order->id)}}" method="post">
+                              @csrf
+                              @method('DELETE')
+                              <button type="button" class="btn btn-sm btn-outline-danger" onclick="alertify.confirm('Silmek istediğine emin misin ?', function(){ document.getElementById('rec_remove_{{$order->id}}').submit(); });">Sil</button>
+                          </form></td>
                       </tr>
                     @endforeach
                   </tbody>
@@ -57,4 +62,5 @@
         </div>
     </div>
 </div>
+
 @endsection
