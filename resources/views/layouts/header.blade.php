@@ -11,21 +11,18 @@
 
         <!-- App Icons -->
         <link rel="shortcut icon" href="{{ asset('assets/images/favicon.ico')}}">
-
+        <link href="{{ asset('assets/plugins/bootstrap-datepicker/css/bootstrap-datepicker.min.css')}}" rel="stylesheet">
         <!-- DataTables -->
         <link href="{{ asset('assets/plugins/datatables/dataTables.bootstrap4.min.css')}}" rel="stylesheet" type="text/css" />
         <link href="{{ asset('assets/plugins/datatables/buttons.bootstrap4.min.css')}}" rel="stylesheet" type="text/css" />
         <!-- Responsive datatable examples -->
-        <link href="{{ asset('assets/plugins/datatables/responsive.bootstrap4.min.css')}}')}}" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('assets/plugins/datatables/responsive.bootstrap4.min.css')}}" rel="stylesheet" type="text/css" />
 
         <!-- App css -->
         <link href="{{ asset('assets/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" />
         <link href="{{ asset('assets/css/icons.css')}}" rel="stylesheet" type="text/css" />
         <link href="{{ asset('assets/css/style.css')}}" rel="stylesheet" type="text/css" />
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-        <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
-        <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js" type="text/javascript"></script>
-    <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+
 
 
     </head>

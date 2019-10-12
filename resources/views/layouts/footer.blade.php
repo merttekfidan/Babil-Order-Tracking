@@ -23,6 +23,7 @@
 <script src="{{ asset('assets/js/jquery.nicescroll.js')}}"></script>
 <script src="{{ asset('assets/js/jquery.scrollTo.min.js')}}"></script>
 
+
 <!--Morris Chart-->
 <script src="{{ asset('assets/plugins/morris/morris.min.js')}}"></script>
 <script src="{{ asset('assets/plugins/raphael/raphael-min.js')}}"></script>
@@ -40,9 +41,24 @@
 <script src="{{ asset('assets/plugins/datatables/buttons.html5.min.js')}}"></script>
 <script src="{{ asset('assets/plugins/datatables/buttons.print.min.js')}}"></script>
 <script src="{{ asset('assets/plugins/datatables/buttons.colVis.min.js')}}"></script>
-<!-- Responsive examples -->
 <script src="{{ asset('assets/plugins/datatables/dataTables.responsive.min.js')}}"></script>
 <script src="{{ asset('assets/pages/datatables.init.js')}}"></script>
+
+<script src="{{ asset('assets/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js')}}"></script>
+<script src="{{ asset('assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js')}}"></script>
+<script src="{{ asset('assets/plugins/bootstrap-maxlength/bootstrap-maxlength.min.js')}}" type="text/javascript"></script>
+<script src="{{ asset('assets/plugins/bootstrap-touchspin/js/jquery.bootstrap-touchspin.min.js')}}" type="text/javascript"></script>
+<script src="{{ asset('assets/pages/form-advanced.js')}}"></script>
+
+
+<!-- Plugins Init js -->
+<script src="assets/pages/form-advanced.js"></script>
+
+
+
+
+
+
 <!-- App js -->
 <script src="{{ asset('assets/js/app.js')}}"></script>
 
