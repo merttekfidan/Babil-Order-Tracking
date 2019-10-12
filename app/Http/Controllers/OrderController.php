@@ -6,7 +6,7 @@ use App\Order;
 use App\City;
 use App\Status;
 use App\PaymentMethod;
-use Illuminate\Http\Request;
+use App\Http\Requests\OrderRequest;
 
 class OrderController extends Controller
 {
@@ -48,7 +48,7 @@ class OrderController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(OrderRequest $request)
     {
         $orders = new Order;
         $orders->name= $request->name;
@@ -110,7 +110,7 @@ class OrderController extends Controller
      * @param  \App\Order  $order
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Order $order)
+    public function update(OrderRequest $request, Order $order)
     {
         $orders = Order::findOrFail($order->id);
         $orders->name= $request->name;
