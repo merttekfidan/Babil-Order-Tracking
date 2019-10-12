@@ -12,9 +12,15 @@
  <div class="row">
      <div class="col-12">
          <div class="card m-b-30">
-        
-
             <div class="card-body">
+              <div class="input-daterange input-group " id="date-range">
+                <form method="POST" action="{{route('orders.index')}}">
+                  {{ csrf_field() }}
+                  <input type="text" class="form-control" name="start" placeholder="Start Date" />
+                  <input type="text" class="form-control" name="end" placeholder="End Date" />
+                  <button type="button" class="btn btn-success waves-effect waves-light">Filtrele</button>
+                </form>
+              </div>
               <table id="datatable-buttons" class="table table-striped table-bordered dataTable no-footer">
                   <thead>
                     <tr>
@@ -52,9 +58,9 @@
                       </tr>
                     @endforeach
                   </tbody>
-                </table>
-            </div>
+              </table>
           </div>
         </div>
-      </div>
+    </div>
+</div>
 @endsection
