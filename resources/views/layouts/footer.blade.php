@@ -50,10 +50,9 @@
 <script src="{{ asset('assets/plugins/bootstrap-touchspin/js/jquery.bootstrap-touchspin.min.js')}}" type="text/javascript"></script>
 <script src="{{ asset('assets/pages/form-advanced.js')}}"></script>
 
-
-<!-- Plugins Init js -->
-<script src="assets/pages/form-advanced.js"></script>
-
+<!-- Alertify js -->
+<script src="{{ asset('assets/plugins/alertify/js/alertify.js')}}"></script>
+<script src="{{ asset('assets/pages/alertify-init.js')}}"></script>
 
 
 
