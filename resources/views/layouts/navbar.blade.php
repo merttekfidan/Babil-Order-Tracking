@@ -170,7 +170,12 @@
                     <li class="has-submenu">
                         <a href="{{route('orders.daily')}}"><i class="mdi mdi-grid"></i>Günlük Siparişler</a>
                     </li>
-
+                    <li class="has-submenu">
+                        <a href="{{route('commercials.index')}}"><i class="mdi mdi-grid"></i>Reklam Tablosu</a>
+                    </li>
+                    <li class="has-submenu">
+                        <a href="{{route('commercials.create')}}"><i class="mdi mdi-plus-circle"></i>Reklam Gideri Ekle</a>
+                    </li>
                 </ul>
                 <!-- End navigation menu -->
             </div> <!-- end #navigation -->

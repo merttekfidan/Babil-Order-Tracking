@@ -13,11 +13,11 @@
 
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 Route::get('/', 'OrderController@index');
+Route::get('/gunlukSiparis', 'DailyOrdersController@index')->name('orders.daily');
+
 
 Route::resources(['orders'=>'OrderController']);
-
+Route::resources(['commercials'=>'CommercialController']);
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
-Route::get('/gunlukSiparis', 'DailyOrdersController@index')->name('orders.daily');
