@@ -11,8 +11,8 @@
                 <!--</a>-->
                 <!-- Image Logo -->
                 <a href="index.html" class="logo">
-                    <img src="/assets/images/logo-sm.png" alt="" height="22" class="logo-small">
-                    <img src="/assets/images/logo.png" alt="" height="24" class="logo-large">
+                    <img src="{{ asset('assets/images/logo-sm.png')}}" alt="" height="22" class="logo-small">
+                    <img src="{{ asset('assets/images/logo.png')}}" alt="" height="24" class="logo-large">
                 </a>
 
             </div>
@@ -159,13 +159,16 @@
                 <!-- Navigation Menu-->
                 <ul class="navigation-menu">
                     <li class="has-submenu">
-                        <a href="index.html"><i class="ti-home"></i>Dashboard</a>
+                        <a href="{{route('dashboard')}}"><i class="ti-home"></i>Dashboard</a>
                     </li>
                     <li class="has-submenu">
                         <a href="{{route('orders.index')}}"><i class="mdi mdi-grid"></i>Siparişleri listele</a>
                     </li>
                     <li class="has-submenu">
                         <a href="{{route('orders.create')}}"><i class="mdi mdi-plus-circle"></i>Yeni Sipariş Ekle</a>
+                    </li>
+                    <li class="has-submenu">
+                        <a href="{{route('orders.daily')}}"><i class="mdi mdi-grid"></i>Günlük Siparişler</a>
                     </li>
 
                 </ul>

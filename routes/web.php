@@ -11,6 +11,7 @@
 |
 */
 
+Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 Route::get('/', 'OrderController@index');
 
 Route::resources(['orders'=>'OrderController']);
@@ -18,3 +19,5 @@ Route::resources(['orders'=>'OrderController']);
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/gunlukSiparis', 'DailyOrdersController@index')->name('orders.daily');
