@@ -24,7 +24,7 @@
               <table id="datatable-buttons" class="table table-striped table-bordered" cellspacing="0" width="100%">
                   <thead>
                     <tr>
-                      <th>Ad</th>
+                      <th>Ad - Soyad</th>
                       <th>Telefon</th>
                       <th>Şehir</th>
                       <th>Fiyat</th>

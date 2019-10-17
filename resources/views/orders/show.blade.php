@@ -23,7 +23,7 @@
   </tr>
   <tr>
     <td><b>Ad-Soyad:</b></td>
-    <td>{{$orders->name}} {{$orders->surname}}</td>
+    <td>{{$orders->name}}</td>
   </tr>
   <tr>
     <td><b>Telefon:</b></td>

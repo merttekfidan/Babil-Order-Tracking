@@ -9,17 +9,14 @@
     </div>
 @endif
 <div class="form-group row">
-    <label for="name-text-input" class="col-sm-2 col-form-label">Ad</label>
+    <label for="name-text-input" class="col-sm-2 col-form-label">Ad - Soyad</label>
     <div class="col-sm-10">
         <input class="form-control" name="name" type="text" value="{{isset($orders->name) ? old('title',$orders->name) :''}}" id="name-text-input">
     </div>
 </div>
-<div class="form-group row">
-    <label for="surname-text-input" class="col-sm-2 col-form-label">Soyad</label>
-    <div class="col-sm-10">
-        <input class="form-control" name="surname" type="text" value="{{isset($orders->surname) ? old('title',$orders->surname) :''}}" id="surname-text-input">
-    </div>
-</div>
+
+        <input class="form-control" name="surname" type="hidden" value="Soyad" id="surname-text-input">
+
 <div class="form-group row">
     <label for="phoneNumber-tel-input" class="col-sm-2 col-form-label">Telefon</label>
     <div class="col-sm-10">
