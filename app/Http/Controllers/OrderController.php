@@ -78,6 +78,8 @@ class OrderController extends Controller
         $orders = Order::findOrFail($order->id);
         $cities = City::all();
         $statuses = Status::all();
+        $orders->statuses_id=2;
+        $orders->save();
         $payment_methods = PaymentMethod::all();
         return view('orders.show')->with('orders', $orders)
                                   ->with('cities', $cities)
