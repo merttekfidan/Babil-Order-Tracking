@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Commercial;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class CommercialController extends Controller
@@ -15,7 +16,9 @@ class CommercialController extends Controller
     public function index(Commercial $commercial)
     {
         $commercials = $commercial->all();
-        return view('commercials.index')->with('commercials', $commercials);
+        $today = Carbon::now();
+        return view('commercials.index')->with('today', $today)
+                                        ->with('commercials', $commercials);
     }
 
     /**
@@ -39,6 +42,7 @@ class CommercialController extends Controller
         $commercial = new Commercial;
         $commercial->name= $request->name;
         $commercial->price= $request->price;
+        $commercial->date= date('Y-m-d', strtotime($request->date));
         $commercial->save();
         return redirect()->route('commercials.index')->with('success', " Başarılı bir şekilde reklam girildi.");
     }
@@ -78,6 +82,7 @@ class CommercialController extends Controller
         $commercial = Commercial::findOrFail($commercial->id);
         $commercial->name= $request->name;
         $commercial->price= $request->price;
+        $commercial->date= date('Y-m-d', strtotime($request->date));
         $commercial->save();
         return redirect()->route('commercials.index')->with('success', " Başarılı bir şekilde reklam güncellendi.");
     }

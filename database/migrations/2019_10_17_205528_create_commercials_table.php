@@ -17,6 +17,7 @@ class CreateCommercialsTable extends Migration
             $table->bigIncrements('id');
             $table->string('name', 255);
             $table->double('price', 7, 2);
+            $table->datetime('date')->nullable();
             $table->timestamps();
         });
     }

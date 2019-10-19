@@ -36,7 +36,7 @@
                       <tr>
                         <td>{{$commercial->name}}</td>
                         <td>{{$commercial->price}}</td>
-                        <td>{{ date('d-m-Y', strtotime($commercial->created_at)) }}</td>
+                        <td>{{ date('d-m-Y', strtotime($commercial->date)) }}</td>
                         <td><a href="{{route('commercials.edit',$commercial->id)}}" class="btn btn-sm btn-outline-primary" >Edit</a></td>
                         <td>
                           <form id="rec_remove_{{$commercial->id}}" style="display:inline;" action="{{route('commercials.destroy',$commercial->id)}}" method="post">
