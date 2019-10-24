@@ -8,6 +8,10 @@ use Illuminate\Http\Request;
 
 class DailyOrdersController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function index(Order $orders)
     {
         $daily_orders= $orders->daily_orders();
