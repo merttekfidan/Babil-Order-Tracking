@@ -33,6 +33,14 @@ class Order extends Model
         }
         return ($orders);
     }
+    public function get_todays_products()
+    {
+        $orders = $this->daily_orders();
+        foreach ($orders as $key => $order) {
+            $orders[$key]->product_code= explode('-', $order->product_code);
+        }
+        return ($orders);
+    }
     public function get_orders_custom($start_date=null, $end_date=null, $statuses_id=null)
     {
         if ($start_date==null && $end_date==null &&$statuses_id==null) {
