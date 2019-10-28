@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\ShippingCompany;
-use Illuminate\Http\Request;
+use App\Http\Requests\ShippingCompanyRequest;
 
 class ShippingCompanyController extends Controller
 {
@@ -14,7 +14,8 @@ class ShippingCompanyController extends Controller
      */
     public function index()
     {
-        //
+        $shipping_companies = ShippingCompany::all();
+        return view('admin.shipping_companies.index')->with('shipping_companies', $shipping_companies);
     }
 
     /**
@@ -24,7 +25,7 @@ class ShippingCompanyController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.shipping_companies.create');
     }
 
     /**
@@ -33,9 +34,13 @@ class ShippingCompanyController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ShippingCompanyRequest $request)
     {
-        //
+        $shipping_companies = new ShippingCompany;
+        $shipping_companies->shipping_company= $request->name;
+        $shipping_companies->code= $request->code;
+        $shipping_companies->save();
+        return redirect()->route('shipping_companies.index')->with('success', " Başarılı bir şekilde kargo girildi.");
     }
 
     /**
@@ -57,7 +62,8 @@ class ShippingCompanyController extends Controller
      */
     public function edit(ShippingCompany $shippingCompany)
     {
-        //
+        $shipping_companies= ShippingCompany::findOrFail($shippingCompany->id);
+        return view('admin.shipping_companies.edit')->with('shipping_companies', $shipping_companies);
     }
 
     /**
@@ -67,9 +73,13 @@ class ShippingCompanyController extends Controller
      * @param  \App\ShippingCompany  $shippingCompany
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, ShippingCompany $shippingCompany)
+    public function update(ShippingCompanyRequest $request, ShippingCompany $shippingCompany)
     {
-        //
+        $shipping_companies = ShippingCompany::findOrFail($shippingCompany->id);
+        $shipping_companies->shipping_company= $request->name;
+        $shipping_companies->code= $request->code;
+        $shipping_companies->save();
+        return redirect()->route('shipping_companies.index')->with('success', " Başarılı bir şekilde kargo düzenlendi.");
     }
 
     /**
@@ -80,6 +90,8 @@ class ShippingCompanyController extends Controller
      */
     public function destroy(ShippingCompany $shippingCompany)
     {
-        //
+        $shipping_companies = ShippingCompany::findOrFail($shippingCompany->id);
+        $shipping_companies->delete();
+        return redirect()->route('shipping_companies.index')->with('success', " Başarılı bir şekilde kargo silindi.");
     }
 }

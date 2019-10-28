@@ -17,6 +17,7 @@ Route::get('/gunlukSiparis', 'DailyOrdersController@index')->name('orders.daily'
 
 
 Route::resources(['orders'=>'OrderController']);
+Route::resources(['admin/shipping_companies'=>'ShippingCompanyController']);
 Route::resources(['commercials'=>'CommercialController']);
 Auth::routes();
 
