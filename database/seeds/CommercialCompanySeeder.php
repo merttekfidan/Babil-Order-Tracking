@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class UserSeeder extends Seeder
+class CommercialCompanySeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,7 +11,6 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('users')->delete();
-        factory('App\User', 1)->create();
+        factory('App\CommercialCompany', 30)->create();
     }
 }

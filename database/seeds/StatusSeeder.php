@@ -14,11 +14,11 @@ class StatusSeeder extends Seeder
     {
         DB::table('statuses')->delete();
         $statuses = [
-               [ 'status' => 'Sipariş Alındı' ],
-               [ 'status' => 'Kargoya Verildi' ],
-               [ 'status' => 'Sipariş İptal' ],
-               [ 'status' => 'Hazırlanıyor' ],
-               [ 'status' => 'İade' ]
+               [ 'status' => 'Sipariş Alındı', 'code'=>'siparis' ],
+               [ 'status' => 'Kargoya Verildi', 'code'=>'kargo' ],
+               [ 'status' => 'Sipariş İptal', 'code'=>'iptal' ],
+               [ 'status' => 'Hazırlanıyor', 'code'=>'hazirlaniyor' ],
+               [ 'status' => 'İade', 'code'=>'iade' ]
              ];
         foreach ($statuses as $status) {
             Status::create($status);

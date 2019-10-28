@@ -14,11 +14,11 @@ class PaymentMethodSeeder extends Seeder
     {
         DB::table('payment_methods')->delete();
         $payment_methods = [
-                 [ 'method_name' => 'Kapıda nakit' ],
-                 [ 'method_name' => 'Kapıda Kredikartı' ],
-                 [ 'method_name' => 'Havale' ],
-                 [ 'method_name' => 'Kurye' ],
-                 [ 'method_name' => 'Ücretsiz' ]
+                 [ 'method_name' => 'Kapıda nakit', 'code'=>'nakit' ],
+                 [ 'method_name' => 'Kapıda Kredikartı', 'code'=>'kart' ],
+                 [ 'method_name' => 'Havale', 'code'=>'havale' ],
+                 [ 'method_name' => 'Kurye', 'code'=>'kurye' ],
+                 [ 'method_name' => 'Ücretsiz', 'code'=>'ucretsiz' ]
                ];
         foreach ($payment_methods as $payment_method) {
             PaymentMethod::create($payment_method);
