@@ -15,18 +15,19 @@ class CreateOrdersTable extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('name', 255);
-            $table->string('surname', 255);
+            $table->string('name_surname', 255);
             $table->string('phone_number', 255);
             $table->string('address', 255);
-            $table->integer('cities_id');
-            $table->string('product_code', 255);
+            $table->integer('city_id');
+            $table->integer('status_id');
             $table->decimal('price', 9, 2);
-            $table->integer('statuses_id');
+            $table->integer('payment_method_id');
             $table->string('note', 255)->nullable();
-            $table->integer('payment_methods_id');
             $table->boolean('control_allowed');
             $table->boolean('payment_on_door');
+            $table->integer('shipping_company_id');
+            $table->integer('user_id');
+            $table->string('track_code');
             $table->timestamps();
         });
     }

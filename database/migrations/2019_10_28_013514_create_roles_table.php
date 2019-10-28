@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCommercialsTable extends Migration
+class CreateRolesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,12 @@ class CreateCommercialsTable extends Migration
      */
     public function up()
     {
-        Schema::create('commercials', function (Blueprint $table) {
+        Schema::create('roles', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('name', 255);
-            $table->double('price', 7, 2);
-            $table->datetime('date')->nullable();
-            $table->timestamps();
+            $table->string('role', 255);
         });
     }
+
     /**
      * Reverse the migrations.
      *
@@ -28,6 +26,6 @@ class CreateCommercialsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('commercials');
+        Schema::dropIfExists('roles');
     }
 }
