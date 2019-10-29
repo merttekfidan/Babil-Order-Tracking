@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\ShippingCompany;
+use Illuminate\Http\Request;
 use App\Http\Requests\ShippingCompanyRequest;
 
 class ShippingCompanyController extends Controller
@@ -12,6 +13,8 @@ class ShippingCompanyController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+
     public function index()
     {
         $shipping_companies = ShippingCompany::all();
