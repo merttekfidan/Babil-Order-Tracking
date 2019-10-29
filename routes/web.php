@@ -11,14 +11,15 @@
 |
 */
 
-Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
-Route::get('/', 'OrderController@index');
-Route::get('/gunlukSiparis', 'DailyOrdersController@index')->name('orders.daily');
 
-
-Route::resources(['orders'=>'OrderController']);
-Route::resources(['admin/shipping_companies'=>'ShippingCompanyController']);
-Route::resources(['commercials'=>'CommercialController']);
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'HomeController@index')->name('home');
+
+Route::get('/admin', function () {
+    return 'you re an admin';
+})->middleware('can:viewAny, App\ShippingCompany');
+
+Route::prefix('admin')->name('admin.')->middleware('can:viewAny,App\ShippingCompany')->group(function () {
+    Route::resources(['/shipping_companies'=>'ShippingCompanyController']);
+});
