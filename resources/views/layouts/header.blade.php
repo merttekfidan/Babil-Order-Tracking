@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
-        <title>Upcube - Responsive Flat Admin Dashboard</title>
+        <title>{{ config('app.name', 'Laravel') }}</title>
+        <meta name="csrf-token" content="{{ csrf_token() }}">
         <meta content="Admin Dashboard" name="description" />
         <meta content="Themesdesign" name="author" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />

@@ -1,7 +1,10 @@
 
 
 @include('layouts.header')
-@include('layouts.navbar')
+<header id="topnav">
+  @include('layouts.topbar')
+  @include('layouts.navbar_custom')
+</header>
 <div class="wrapper">
     <div class="container-fluid">
 
@@ -10,7 +13,7 @@
             <div class="col-sm-12">
                 <div class="page-title-box">
                     <div class="btn-group pull-right">
-                        
+
 
                     </div>
                     @yield('content')
