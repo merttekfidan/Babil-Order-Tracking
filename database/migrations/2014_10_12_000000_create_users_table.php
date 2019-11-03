@@ -23,8 +23,10 @@ class CreateUsersTable extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
-            $table->DateTime('last_online');
+            $table->timestamp('last_online')->nullable();
             $table->timestamps();
+            $table->boolean('active');
+            $table->timestamp('blocked_date')->nullable();
         });
     }
 

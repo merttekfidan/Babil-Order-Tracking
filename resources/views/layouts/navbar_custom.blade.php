@@ -39,8 +39,8 @@
                           <li class="has-submenu">
                               <a href="#">Kullanıcı</a>
                               <ul class="submenu">
-                                  <li><a href="form-elements.html">Kullanıcıları listele</a></li>
-                                  <li><a href="form-validation.html">Kullanıcı ekle</a></li>
+                                  <li><a href="{{route('admin.user.index')}}">Kullanıcıları listele</a></li>
+                                  <li><a href="{{route('admin.user.create')}}">Kullanıcı ekle</a></li>
                               </ul>
                           </li>
                           <li class="has-submenu">

@@ -27,6 +27,7 @@ class UserSeeder extends Seeder
             'last_online' => date('Y-m-d H:i:s'),
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
+            'active' => 1,
           ],
           [
               'name' => 'Merdjan2',
@@ -40,6 +41,7 @@ class UserSeeder extends Seeder
               'last_online' => date('Y-m-d H:i:s'),
               'created_at' => date('Y-m-d H:i:s'),
               'updated_at' => date('Y-m-d H:i:s'),
+              'active' => 1,
           ]
            ];
         foreach ($users as $user) {
