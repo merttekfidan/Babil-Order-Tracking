@@ -1,7 +1,7 @@
-## BABIL ORDER TRACKING
+## BABIL ORDER TRACKING
 A Laravel web application to track order statuses from production to delivery.
 
-## Setting up
+### Setting up
 
 -   Install Composer Dependencies
 
