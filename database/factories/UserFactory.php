@@ -17,11 +17,12 @@ use Illuminate\Support\Str;
 */
 
 $factory->define(User::class, function (Faker $faker) {
-    return [
-        'name' => 'Merdjan Tekfidan',
-        'email' => 'merttekfidan@gmail.com',
+    return 
+    [
+        'name' => 'Demo Demo',
+        'email' => 'demo@demo.com',
         'email_verified_at' => now(),
-        'password' => '$2y$10$xzAkpQYAhicmqlsPLw58TOn.8p6fj9Lfizt3fYK3k4MVdzKuwQnPO', // password
+        'password' => '$2y$10$r84DlgSRu8JuE3IZL7ZuquUrydg.1nMT2e1XjQjeK2gzcMkX55X76', // password 12345678
         'remember_token' => Str::random(10),
     ];
 });
