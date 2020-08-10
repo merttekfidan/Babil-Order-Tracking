@@ -2,7 +2,7 @@
 A Laravel web application to track order statuses from production to delivery.
 
 ### Demo
-http://merttekfidan.com
+http://merttekfidan.com/babil
 
 
 ### Setting up
